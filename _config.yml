@@ -1,71 +1,34 @@
-# Where things are
-source:       .
-destination:  ./_site
-plugins_dir:  _plugins
-layouts_dir:  _layouts
-data_dir:     _data
-includes_dir: _includes
-collections:
-  posts:
-    output:   true
+safe: false
+permalink: /posts/:title.html
+exclude:
+  - README.md
 
-# Handling Reading
-safe:         false
-include:      [".htaccess"]
-exclude:      ["node_modules", "vendor"]
-keep_files:   [".git", ".svn"]
-encoding:     "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+name: MyBlog
+host: localhost
+desc: Some description of your site.
 
-# Filtering Content
-show_drafts: null
-limit_posts: 0
-future:      false
-unpublished: false
+custom:
+    category:
+        default: Default Category
+        another: Another Category
+    categories:
+      - name:  default
+        title: Default Category
 
-# Plugins
-whitelist: []
-gems:      []
+      - name:  another
+        title: Another Category
 
-# Conversion
-markdown:    kramdown
-highlighter: rouge
-lsi:         false
-excerpt_separator: "\n\n"
-incremental: false
+    scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
-# Serving
-detach:  false
-port:    4000
-host:    127.0.0.1
-baseurl: "/myblog" # does not include hostname
-show_dir_listing: false
+meta:
+    author:
+        name: WilsonIsOnly
+        email: zhangtao522009@163.com
+        disqus:留言区              # Disqus缩略标识
+        gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID
+        github: wilsonIsOnly                 # GitHub账号
+        gravatar: 1cd8c12591616d8c22aaa624f8c07834  # Gravatar头像标识
 
-# Outputting
-permalink:     date
-paginate_path: /page:num
-timezone:      null
-
-quiet:    false
-verbose:  false
-defaults: []
-
-liquid:
-  error_mode: warn
-
-# Markdown Processors
-rdiscount:
-  extensions: []
-
-redcarpet:
-  extensions: []
-
-kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  input:          GFM
-  hard_wrap:      false
-  footnote_nr:    1
+    disqus: disqus.com/embed.js                     # Disqus评论的JS地址
+    gapi: http://www.google.com/jsapi               # Google API地址
+    gravatar: http://en.gravatar.com/avatar/        # Gravatar头像服务器地址
