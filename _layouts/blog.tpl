@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -10,8 +10,8 @@
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 <link href="http://{{ site.blog.host }}/blog/feed.xml" rel="alternate" title="{{ site.blog.name }}" type="application/atom+xml" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="/assets/css/blog.css" />
-<link rel="stylesheet" type="text/css" href="/assets/css/code/sunburst.css" />
+<link rel="stylesheet" type="text/css" href="/myblog/assets/css/blog.css" />
+<link rel="stylesheet" type="text/css" href="/myblog/assets/css/code/sunburst.css" />
 {% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ style }}" />
 {% endfor %}
 </head>
@@ -46,7 +46,7 @@
 			{% if site.meta.author.gravatar %}<img src="{{ site.meta.gravatar}}{{ site.meta.author.gravatar }}?s=48" />{% endif %}
 			<figcaption><strong>{{ site.meta.author.name }}</strong></figcaption>
 		</figure>
-		<p>由于经常造各种轮子，所以自诩为前端造轮子工程师。各种形式主义，工具癖，规划控，纠结帝……以及重度拖延症患者。</p>
+		<p>内容为空</p>
 	</div>
 	
 	<div class="block block-license">
@@ -71,7 +71,7 @@
 
 <script type="text/javascript" src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>
 <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-<script src="/assets/js/site.js"></script>
+<script src="/myblog/assets/js/site.js"></script>
 {% for script in page.scripts %}<script src="{{ script }}"></script>
 {% endfor %}
 <script>
