@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: blog
 
-class: page-type-list
+pageClass: page-type-list
 ---
 
 <!-- 博客分类列表 -->

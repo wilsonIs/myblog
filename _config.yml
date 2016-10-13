@@ -1,32 +1,46 @@
+markdown: kramdown
 safe: false
-permalink: /posts/:title.html
+permalink: /blog/posts/:title
 exclude:
   - README.md
 
-name: MyBlog
-host: localhost
-desc: Some description of your site.
+blog:
+    host: wilsonIsOnly.com
+    name: 夜溅星河长路漫漫
+    desc: 读读写写
 
 custom:
     category:
-        default: Default Category
-        another: Another Category
+        thinking: Why...
+        experience: How To Do
+        discovery: What's New
+        criticism: What's Wrong
+        communication: Sharing Is Something
     categories:
-      - name:  default
-        title: Default Category
+      - name:  thinking
+        title: Why...
 
-      - name:  another
-        title: Another Category
+      - name:  experience
+        title: How To Do
+
+      - name:  discovery
+        title: What's New
+
+      - name:  criticism
+        title: What's Wrong
+
+      - name: communication
+        title: Sharing Is Something
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
 meta:
     author:
-        name: WilsonIsOnly
+        name: wilsonIsOnly
         email: zhangtao522009@163.com
-        disqus: Comments              # Disqus缩略标识
+        disqus: comments                    # Disqus缩略标识
         gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID
-        github: wilsonIsOnly                 # GitHub账号
+        github: wilsonIsOnly                          # GitHub账号
         gravatar: 1cd8c12591616d8c22aaa624f8c07834  # Gravatar头像标识
 
     disqus: disqus.com/embed.js                     # Disqus评论的JS地址
