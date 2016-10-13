@@ -22,7 +22,7 @@
 	{{ content }}
 
 	<footer>
-		<p>&copy; Since 2012 <a href="http://yanjunyi.com/">yanjunyi.com</a></p>
+		<p>&copy; Since 2016 <a href="http://wilsonis.github.io/myblog/">wilsonis.github.io/myblog</a></p>
 	</footer>
 </div>
 
