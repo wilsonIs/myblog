@@ -1,10 +1,10 @@
 ---
-title: 加入百度
+title: 工作
 category: works
 icon: building-o
-tags: [百度]
+tags: [Job]
 figures:
-  - src: "http://mbed.qiniudn.com/yanjunyi.com/img/works/baidu.png"
+  - src: ""
     height: 55
 public: false
 ---
