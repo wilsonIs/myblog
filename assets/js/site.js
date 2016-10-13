@@ -48,17 +48,17 @@ var site = {
 	Translation: {
 		lang: {
 			en: {
-				name: 'MythArcher Yan',
+				name: 'WilsonIsOnly',
 				title: 'Web Engineer, Freelancer',
 				works: 'Works',
 				blog: 'Blog',
 				'google-plus': '+me',
 
-				'work-for-free': 'Work for Freedom',
+				'work-for-free': 'For a Better Life',
 				'programming-skills': 'Programming Skills',
 				'using-tools': 'Using Tools',
 				'contact-me': 'Contact Me',
-				'contact-me-description': 'I undertake various types of Web development in long term. If you can provide a payment not lower than $20/h, feel free contact me: ',
+				'contact-me-description': 'Contact: ',
 				recently: 'Recently'
 			}
 		},
