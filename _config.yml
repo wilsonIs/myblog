@@ -5,7 +5,7 @@ exclude:
   - README.md
 
 blog:
-    host: wilsonIsOnly.com
+    host: 
     name: 夜溅星河长路漫漫
     desc: 读读写写
 
