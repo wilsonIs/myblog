@@ -47,8 +47,8 @@
 
 </div>
 
-<script src="/lib/reveal.js/lib/js/head.min.js"></script>
-<script src="/lib/reveal.js/js/reveal.min.js"></script>
+<script src="/myblog/lib/reveal.js/lib/js/head.min.js"></script>
+<script src="/myblog/lib/reveal.js/js/reveal.min.js"></script>
 
 <script>
 
