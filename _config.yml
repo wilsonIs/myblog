@@ -1,6 +1,6 @@
 markdown: kramdown
 safe: false
-permalink: /myblog/blog/posts/:title
+permalink: /myblog/myblog/blog/_posts/:title
 exclude:
   - README.md
 
