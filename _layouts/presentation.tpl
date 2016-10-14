@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="/lib/reveal.js/css/reveal.css">
 <link rel="stylesheet" href="/lib/reveal.js/css/theme/default.css" id="theme">
 <link rel="stylesheet" href="/assets/css/reveal.css">
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" />
+<link rel="stylesheet" href="/lib/font-awesome/font-awesome.css" />
 
 <style>
 .sec-new-things li{
