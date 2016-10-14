@@ -27,15 +27,15 @@
 </div>
 
 <aside>
-	<h2><a href="/"><i class="fa fa-home"></i></a> / <a href="/blog/">{{ site.blog.name }}</a><a href="/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
+	<h2><a href="/"><i class="fa fa-home"></i></a> / <a href="/myblog/blog/">{{ site.blog.name }}</a><a href="/myblog/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
 	<nav class="block">
 		<ul>
-		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
+		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/myblog/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
 		{% endfor %}
 		</ul>
 	</nav>
 	
-	<form action="/search/" class="block block-search">
+	<form action="/myblog/search/" class="block block-search">
 		<h3>搜索</h3>
 		<p><input type="search" name="q" placeholder="输入关键词按回车搜索" /></p>
 	</form>
