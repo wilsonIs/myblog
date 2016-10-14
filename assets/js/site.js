@@ -169,7 +169,7 @@ var site = {
 		
 		loadArticle: function (item) {
 			elf().ajax({
-				url: "/myblog"+elf(item).firstChild().firstChild().attr('href'),
+				url: elf(item).firstChild().firstChild().attr('href'),
 				onsuccess: function (response) {
 					site.Handlers.showAjaxContent(item, response);
 				}
