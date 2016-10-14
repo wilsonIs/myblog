@@ -9,7 +9,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 <link href="http://{{ site.blog.host }}/blog/feed.xml" rel="alternate" title="{{ site.blog.name }}" type="application/atom+xml" />
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" />
+<link rel="stylesheet" href="/myblog/lib/font-awesome/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="/myblog/assets/css/blog.css" />
 <link rel="stylesheet" type="text/css" href="/myblog/assets/css/code/sunburst.css" />
 {% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ style }}" />
@@ -43,7 +43,8 @@
 	<div class="block block-about">
 		<h3>关于</h3>
 		<figure>
-			{% if site.meta.author.gravatar %}<img src="{{ site.meta.gravatar}}{{ site.meta.author.gravatar }}?s=48" />{% endif %}
+			<!-- {% if site.meta.author.gravatar %}<img src="{{ site.meta.gravatar}}{{ site.meta.author.gravatar }}?s=48" />{% endif %} -->
+			<img src="../potrait.png" width="80" height="80" />
 			<figcaption><strong>{{ site.meta.author.name }}</strong></figcaption>
 		</figure>
 		<p>内容为空</p>
