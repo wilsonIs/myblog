@@ -96,18 +96,16 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 }
 
 #pictureDiv{
-	bottom: 2rem;
+	height: 30%;
 	position: absolute;
-	height: 20%;
+	top:20px;
+	left: 32%;
 	width: 50%;
-	left: 25%;
 }
-
 #pictureDiv img{
 	vertical-align: middle;
-	width: 50%;
-	/*height: 100%;*/
-	margin-left: 25%;
+	/*width: 50%;*/
+	margin-left: 40%;
 }
 
 @media (min-width: 801px) {
@@ -194,8 +192,19 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	#card li{line-height: 147px;}
 	#card li.half{line-height: 70px;}
 	#card li.quarter{line-height: 70px;}
-	#pictureDiv{position: absolute;top:12%;left: 50%;}
-	#pictureDiv img{margin-left: 40%;}
+	#pictureDiv{
+		height: 20%;
+		position: absolute;
+		top:40px;
+		left: 50%;
+		width: 50%;
+	}
+	#pictureDiv img{
+		vertical-align: middle;
+		width: 50%;
+		height: 100%;
+		margin-left: 40%;
+	}
 }
 /*
 @media (min-width: 320px) and (max-width: 450px) {
@@ -270,6 +279,7 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	        // Set events
 	        takePicture.onchange = function (event) {
 	            // Get a reference to the taken picture or chosen file
+	            showPicture.style.height="100%";
 	            var files = event.target.files,
 	                file;
 	            if (files && files.length > 0) {
@@ -295,6 +305,7 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	                            showPicture.src = event.target.result;
 	                        };
 	                        fileReader.readAsDataURL(file);
+
 	                    }
 	                    catch (e) {
 	                        //
