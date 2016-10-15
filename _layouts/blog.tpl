@@ -27,7 +27,7 @@
 </div>
 
 <aside>
-	<h2><a href="/"><i class="fa fa-home"></i></a> / <a href="/myblog/blog/">{{ site.blog.name }}</a><a href="/myblog/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
+	<h2><a href="/myblog/"><i class="fa fa-home"></i></a> / <a href="/myblog/blog/">{{ site.blog.name }}</a><a href="/myblog/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
 	<nav class="block">
 		<ul>
 		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/myblog/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
