@@ -111,6 +111,16 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	height: 4rem;
 	display: flex;
 	flex-shrink: 1;
+	transform: scale(1);
+	transition: all 1s;
+	margin: 2px;
+	box-shadow: 2px 2px 2px grey;
+	transform: rotate3d(1,1,1,15deg);
+}
+#pictureDiv img:hover{
+	transform: scale(3);
+	margin-top: 100px;
+	z-index: 99999;
 }
 
 @media (min-width: 801px) {
@@ -173,7 +183,7 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 		transition: none;
 	}
 	#pictureDiv{
-		height: 1rem;
+		height: 2rem;
 		position: absolute;
 		/*left: 10%;*/
 		width: 80%;
@@ -185,7 +195,7 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	#pictureDiv img{
 		vertical-align: middle;
 		/*width: 1rem;*/
-		height: 1rem;
+		height: 2rem;
 		display: flex;
 		flex-shrink:1;
 	}
@@ -280,16 +290,27 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 <script type="text/javascript" src="/myblog/lib/qrcode.min.js"></script>
 <script type="text/javascript" src="/myblog/assets/js/site.js"></script>
 <script>
+	var page = document.querySelector("#page");
+	//随机函数
+	function randomFn(min,max){
+		return Math.floor(Math.random()*(max-min)+min);
+	}
+
+
 	(function () {
 	    var takePicture = document.querySelector("#take-picture"),
 	    	pictureDiv = document.querySelector("#pictureDiv");
-
 
 	    //添加信息（构建img）
 		function addPic(obj) {
 			var img = document.createElement("img");
 		  	// Set img src to ObjectURL
             img.src = obj.value;
+            img.style.position = "absolute";
+            img.style.left = randomFn(0,10)+"px";
+            img.style.top = randomFn(0,page.offsetHeight-50)+"px";
+            img.style.zIndex = "3";
+            // img.style.opacity = randomFn(5,10)/10;
 			return img;
 		}
 
