@@ -4,8 +4,8 @@ category: works
 icon: building-o
 tags: [Job]
 figures:
-  - src: ""
-    height: 55
+  - src: "../works/img/nj.jpg"
+    height: 300
 public: false
 ---
 
