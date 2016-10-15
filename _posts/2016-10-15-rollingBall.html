@@ -30,6 +30,10 @@ category: what's new
 	<body>
 		<div id="box"></div>
 		<script type="text/javascript">
+			var body = document.querySelector("body");
+			var box = document.querySelector("#box");
+			var bodyWidth = body.offsetWidth;
+
 			//随机函数
 			function randomFn(min,max){
 				return Math.floor(Math.random()*(max-min)+min);
@@ -37,7 +41,7 @@ category: what's new
 			//小球的构造函数
 			function Ball(){
 				this.divBall = document.createElement("div");
-				var num = randomFn(20,100);
+				var num = randomFn(20,bodyWidth/15);
 				this.width = num+"px";
 				this.height = num+"px";
 				this.left = randomFn(0,document.body.offsetWidth-num)+"px";
@@ -72,6 +76,10 @@ category: what's new
 					}
 					_this.divBall.style.left=_this.divBall.offsetLeft+_this.speedX+"px";
 					_this.divBall.style.top=_this.divBall.offsetTop+_this.speedY+"px";
+
+					if(_this.divBall.style.left<-100||_this.divBall.style.top<-100){
+						box.removeChild(_this.divBall);
+					}
 				},randomFn(10,100));
 			}
 			Ball.prototype.bgCol = function(){
@@ -87,7 +95,16 @@ category: what's new
 					ball.bgCol();
 				}
 			}
-			createBalls(100);
+
+			
+			if(bodyWidth>800){
+				createBalls(80);
+			}else if(bodyWidth<=800&&bodyWidth>600){
+				createBalls(40);
+			}else{
+				createBalls(20);
+			} 
+			
 		</script>
 	</body>
 </html>
