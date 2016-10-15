@@ -2,8 +2,8 @@
 
 {% for post in list %}
 {% if post.category != 'works' %}
-<article{% if forloop.index == 1 and preview %} content-loaded="1"{% endif %}>
-	<h2><a href="/myblog{{ post.url }}">{{ post.title }}</a></h2>
+<article {% if forloop.index == 1 and preview %} content-loaded="1"{% endif %}>
+	<h2><a href="/myblog/{{ post.url }}">{{ post.title }}</a></h2>
 	{% include meta.tpl %}
 	<div class="article-content">
 	{% if forloop.index == 1 and preview and post.layout == 'post' %}
@@ -13,6 +13,8 @@
 	{% endif %}
 	</div>
 </article>
+
+
 {% endif %}
 {% endfor %}
 
