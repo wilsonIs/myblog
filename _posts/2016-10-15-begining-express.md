@@ -96,7 +96,8 @@ category: experience
 	<p>
 	//app.listen(3000);<br/>
 	//监听端口3000的请求<br/><br/>
-	
+	</p>
+	<p>
 	设置完service.js的信息后，我们还需要将package.json文件中的信息设置一下:
 	<code>
 		"scripts": {
@@ -108,18 +109,126 @@ category: experience
 	</p>
 	<p>
 	以上信息设置完之后，我们就可以愉快的开启我们建立的web服务器了，只需进入myapp文件，在命令行输入：
-	
+	</p>
 	<code>
 		npm start
 	</code>
-	
+	<p>
 	//注释：启动web服务器命令。之后命令行提示 
 	<code>
 		myapp@0.1.1 start F:\MyWeb\myapp 
 		node service.js
 	</code>
-	//则表示服务器启动成功。服务器启动成功后，可以按下ctrl+c键停止该服务器。<br/><br/>
-
-	下面打开浏览器，输入http://localhost:3000/index.html就可以访问我们的网页啦，同一个局域网下的电脑都能够访问得到。这样我们就成功地设置了一个web服务器，用于模拟访问网页文件等数据。<br/>
 	</p>
+	<p>//则表示服务器启动成功。服务器启动成功后，可以按下ctrl+c键停止该服务器。<br/><br/></p>
+	<p>下面打开浏览器，输入http://localhost:3000/index.html就可以访问我们的网页啦，同一个局域网下的电脑都能够访问得到。这样我们就成功地设置了一个web服务器，用于模拟访问网页文件等数据。<br/></p>
+</section>
+
+<section>
+	<h2> 3.2.	利用express模拟搭建一个简易的数据库服务器</h2>
+	<p>跟前面搭建web服务器一样，我们先在F盘新建MyData文件件夹, MyData文件夹下
+	新建子文件夹myapp，通过npm init命令初始化配置文件package.json。并在MyData文件夹下通过npm install express --save命令安装express模块，MyData文件夹下自动生成一个node_modules文件夹。
+	</p>
+	<p>然后我们在myapp内粘贴入一个data文件夹，data文件内存放着1.json数据。</p>
+	<p>同样在myapp下新建一个service.js文件，文件内的信息如下：
+		<code>
+			var express = require("express");<br/>
+			var fs = require("fs");    //引入fs文件管理模块<br/>
+			var app = express();<br/>
+			var bufferData = [];     //建立存储读取文件信息缓存的数组<br/><br/>
+		</code>
+		<code>
+			fs.readFile("data/1.json",function(err,data){   //读取1.json文件里的数据<br/>		
+				bufferData.push(data);		//将读取到的文件信息存进bufferData数组中<br/>
+				app.listen(3100);		//数据读取完之后开始启动监听端口3100的服务器<br/>
+				console.log("服务器启动中>>>>>>>>>>>>>>>>");<br/>
+				//在命令行中显示服务器启动提示<br/>
+			})		
+		</code>
+	</p>
+	<p>
+		//注释：以上代码是用来设置CROS跨域的头部信息
+	</p>
+	<p>
+		app.get("/tcb/shops/pages/:count",function(req,res){   
+	</p>
+	<p>
+		//注释：获得用户的请求类型，还有post,delete等
+		//“/tcb/shops/pages/:count”是自定义设置的请求路径，为虚拟路径，其中：count是指用于请求的参数
+	</p>
+	<p>
+			var count = req.params.count-1;   //用户请求的参数
+			//res.set('Content-type','application/json');  
+	</p>
+	<p>
+		//这也是一种设置头部信息的方法，但并不能实现跨域功能
+	</p>
+	<p>
+		res.send(bufferData[count]);  
+	</p>
+	<p>
+		//响应信息，将获得的json文件内的数据发送回客户端
+	</p>
+	<p>
+			console.log("当前访问第："+(count+1)+"页");
+		});
+	</p>
+	<p>//在命令行中显示用户请求的信息<br/>
+		设置完上面的信息之后，我们只需要再将package.json中的scripts脚本设置为: <br/>
+	</p>
+	<code>	
+		"scripts": {
+		   		 "start":"node service.js"
+		 	 }
+	</code>	
+	<p>
+		然后在命令行中输入
+	</p>
+	<code>	
+		npm start
+	</code>
+	<p>
+		就可以在浏览器中输入http://localhost:3100/tcb/shops/pages/1  看到1.json中的文件信息。
+	</p>
+</section>
+
+<section>
+	<h2>3.3.	模拟通过web服务器获取数据库服务器中的数据</h2>
+	<p>搭建好web服务器和数据库服务器之后，我们还需要进行进一步设置，实现从web服
+	务器发送获取数据库中数据的请求，并成功将数据库服务器中的1.json拿到客户端页面展示。		
+	</p>
+	<p>这个功能实现起来并不难，因为我们前面已经在数据库服务器中设置好了CROSS头部信息，可以轻松的实现跨域获取数据了。</p>
+	<p>在index.html中建立一个button按钮，并给button添加一个点击事件，内容如下：
+		<code>
+		$(“button”).click(function(){
+			$.ajax({
+				type:'get',		//向服务器端发送get请求
+				url:url,	        //url的地址为http://localhost:3100/tcb/shops/pages/1
+				dataType:'text',    //服务器端返回的数据是text格式
+				success:function(data){
+					fn(data);     //将返回的数据传入fn函数
+				},
+				error:function(e){
+					console.log("发生错误！");
+				}
+			})
+		})		
+		function fn(data){    //处理返回数据的函数
+			//将取回来的data数据进行一些处理操作
+		}
+	</code>
+	<p>除了这样设置之外，也可以通过<\script>引入一个回调函数来处理跨域问题。eg: 
+		<code>
+		$(".page_a").click(function(){
+			$.getJSON(url+"?callback=?",getDataFromServer);
+		}
+		function getDataFromServer(){
+			//处理数据的函数
+		}
+		</code>
+	//这个方法比较简单，这里就不累赘了。
+	</p>	
+	<p>
+		/*文稿持续更新中……待续……*/
+	</p>	
 </section>
