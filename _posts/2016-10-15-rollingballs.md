@@ -3,7 +3,7 @@ title: 五彩缤纷的小球
 category: works
 icon: code-fork
 tags: [balls，demo]
-link: "https://wilsonis.github.io/myblog/blog/posts/rollingBall"
+link: "https://wilsonis.github.io/myblog/html/rollingBall.html"
 figures:
   - src: ""
     height: 50
