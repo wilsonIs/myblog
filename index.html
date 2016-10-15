@@ -96,16 +96,21 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 }
 
 #pictureDiv{
-	height: 30%;
+	height: 4rem;
 	position: absolute;
-	top:20px;
-	left: 32%;
-	width: 50%;
+	left: 10%;
+	width: 80%;
+	/*background-color: #ccc;*/
+	display: flex;
+	justify-content:center;
+	flex-wrap: wrap;
 }
 #pictureDiv img{
 	vertical-align: middle;
-	/*width: 50%;*/
-	margin-left: 40%;
+	/*width: 4rem;*/
+	height: 4rem;
+	display: flex;
+	flex-shrink: 1;
 }
 
 @media (min-width: 801px) {
@@ -160,12 +165,29 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	#link-file-image-o{left: 105px; top: 315px;}
 	#link-more{left: 315px; top: 315px;}
 }
-@media (max-width: 480px){
+@media (max-width: 500px){
 	#card,#card ul{
 		-webkit-transition: none;
 		-moz-transition: none;
 		-ms-transition: none;
 		transition: none;
+	}
+	#pictureDiv{
+		height: 1rem;
+		position: absolute;
+		/*left: 10%;*/
+		width: 80%;
+		/*background-color: #ccc;*/
+		display: flex;
+		justify-content:center;
+		flex-wrap: wrap;
+	}
+	#pictureDiv img{
+		vertical-align: middle;
+		/*width: 1rem;*/
+		height: 1rem;
+		display: flex;
+		flex-shrink:1;
 	}
 }
 @media (max-width: 450px) {
@@ -192,19 +214,6 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	#card li{line-height: 147px;}
 	#card li.half{line-height: 70px;}
 	#card li.quarter{line-height: 70px;}
-	#pictureDiv{
-		height: 20%;
-		position: absolute;
-		top:40px;
-		left: 50%;
-		width: 50%;
-	}
-	#pictureDiv img{
-		vertical-align: middle;
-		width: 50%;
-		height: 100%;
-		margin-left: 40%;
-	}
 }
 /*
 @media (min-width: 320px) and (max-width: 450px) {
@@ -262,10 +271,10 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 			<li id="link-more" class="quarter"><a href="#more"><i class="fa fa-ellipsis-h"></i></a></li>
 		</ul>
 	</div>
+	<div id="pictureDiv">
+	</div>
 </div>
-<div id="pictureDiv">
-	<img src="about:blank" alt="" id="show-picture">
-</div>
+
 
 <script type="text/javascript" src="/myblog/lib/elf/elf-0.5.0.min.js"></script>
 <script type="text/javascript" src="/myblog/lib/qrcode.min.js"></script>
@@ -273,13 +282,40 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 <script>
 	(function () {
 	    var takePicture = document.querySelector("#take-picture"),
-	    	showPicture = document.querySelector("#show-picture");
+	    	pictureDiv = document.querySelector("#pictureDiv");
 
-	    if (takePicture && showPicture) {
+
+	    //添加信息（构建img）
+		function addPic(obj) {
+			var img = document.createElement("img");
+		  	// Set img src to ObjectURL
+            img.src = obj.value;
+			return img;
+		}
+
+	    //读取本地存储
+		readStorage();
+		
+		function readStorage () {
+			if (window.localStorage) {
+				//虚拟节点
+				var frg = document.createDocumentFragment();
+				
+				for (var key in window.localStorage) {
+					var exp = /^(pic_)/i;
+					if (exp.test(key)) {
+						frg.appendChild(addPic(JSON.parse(window.localStorage.getItem(key))));
+					}
+				}
+				pictureDiv.appendChild(frg);
+			}
+		}
+
+	    if (takePicture && pictureDiv) {
 	        // Set events
 	        takePicture.onchange = function (event) {
+
 	            // Get a reference to the taken picture or chosen file
-	            showPicture.style.height="100%";
 	            var files = event.target.files,
 	                file;
 	            if (files && files.length > 0) {
@@ -287,25 +323,36 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #888;}
 	                try {
 	                    // Get window.URL object
 	                    var URL = window.URL || window.webkitURL;
-
 	                    // Create ObjectURL
 	                    var imgURL = URL.createObjectURL(file);
-
-	                    // Set img src to ObjectURL
-	                    showPicture.src = imgURL;
+	                    console.log(imgURL.toDataURL("image/png"));
+	                    var obj = {
+							value : imgURL,
+							date : new Date().toLocaleString()
+						}
+			        	pictureDiv.appendChild(addPic(obj));
 
 	                    // Revoke ObjectURL
 	                    URL.revokeObjectURL(imgURL);
+
+						//存储到本地
+						window.localStorage.setItem("pic_" + obj.date, JSON.stringify(obj));
 	                }
 	                catch (e) {
 	                    try {
 	                        // Fallback if createObjectURL is not supported
 	                        var fileReader = new FileReader();
 	                        fileReader.onload = function (event) {
-	                            showPicture.src = event.target.result;
+	                        	var obj = {
+									value : event.target.result,
+									date : new Date().toLocaleString()
+								}
+	                            pictureDiv.appendChild(addPic(obj));
+	                            //存储到本地
+								window.localStorage.setItem("pic_" + obj.date, JSON.stringify(obj));
 	                        };
 	                        fileReader.readAsDataURL(file);
-
+	                        
 	                    }
 	                    catch (e) {
 	                        //
