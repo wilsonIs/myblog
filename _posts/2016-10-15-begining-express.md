@@ -126,8 +126,7 @@ category: experience
 
 <section>
 	<h2> 3.2.	利用express模拟搭建一个简易的数据库服务器</h2>
-	<p>跟前面搭建web服务器一样，我们先在F盘新建MyData文件件夹, MyData文件夹下
-	新建子文件夹myapp，通过npm init命令初始化配置文件package.json。并在MyData文件夹下通过npm install express --save命令安装express模块，MyData文件夹下自动生成一个node_modules文件夹。
+	<p>跟前面搭建web服务器一样，我们先在F盘新建MyData文件件夹, MyData文件夹下新建子文件夹myapp，通过npm init命令初始化配置文件package.json。并在MyData文件夹下通过npm install express--save命令安装express模块，MyData文件夹下自动生成一个node_modules文件夹。
 	</p>
 	<p>然后我们在myapp内粘贴入一个data文件夹，data文件内存放着1.json数据。</p>
 	<p>同样在myapp下新建一个service.js文件，文件内的信息如下：
@@ -157,8 +156,8 @@ category: experience
 		//“/tcb/shops/pages/:count”是自定义设置的请求路径，为虚拟路径，其中：count是指用于请求的参数
 	</p>
 	<p>
-			var count = req.params.count-1;   //用户请求的参数
-			//res.set('Content-type','application/json');  
+			var count = req.params.count-1;   //用户请求的参数<br/>
+			//res.set('Content-type','application/json');<br/>  
 	</p>
 	<p>
 		//这也是一种设置头部信息的方法，但并不能实现跨域功能
@@ -170,22 +169,22 @@ category: experience
 		//响应信息，将获得的json文件内的数据发送回客户端
 	</p>
 	<p>
-			console.log("当前访问第："+(count+1)+"页");
+			console.log("当前访问第："+(count+1)+"页");<br/>
 		});
 	</p>
 	<p>//在命令行中显示用户请求的信息<br/>
 		设置完上面的信息之后，我们只需要再将package.json中的scripts脚本设置为: <br/>
 	</p>
 	<code>	
-		"scripts": {
-		   		 "start":"node service.js"
-		 	 }
+		"scripts": {<br/>
+		   		 "start":"node service.js"<br/>
+		 	 }<br/>
 	</code>	
 	<p>
 		然后在命令行中输入
 	</p>
 	<code>	
-		npm start
+		npm start<br/>
 	</code>
 	<p>
 		就可以在浏览器中输入http://localhost:3100/tcb/shops/pages/1  看到1.json中的文件信息。
@@ -194,39 +193,38 @@ category: experience
 
 <section>
 	<h2>3.3.	模拟通过web服务器获取数据库服务器中的数据</h2>
-	<p>搭建好web服务器和数据库服务器之后，我们还需要进行进一步设置，实现从web服
-	务器发送获取数据库中数据的请求，并成功将数据库服务器中的1.json拿到客户端页面展示。		
+	<p>搭建好web服务器和数据库服务器之后，我们还需要进行进一步设置，实现从web服务器发送获取数据库中数据的请求，并成功将数据库服务器中的1.json拿到客户端页面展示。		
 	</p>
 	<p>这个功能实现起来并不难，因为我们前面已经在数据库服务器中设置好了CROSS头部信息，可以轻松的实现跨域获取数据了。</p>
 	<p>在index.html中建立一个button按钮，并给button添加一个点击事件，内容如下：
 		<code>
-		$(“button”).click(function(){
-			$.ajax({
-				type:'get',		//向服务器端发送get请求
-				url:url,	        //url的地址为http://localhost:3100/tcb/shops/pages/1
-				dataType:'text',    //服务器端返回的数据是text格式
-				success:function(data){
-					fn(data);     //将返回的数据传入fn函数
-				},
-				error:function(e){
-					console.log("发生错误！");
-				}
-			})
-		})		
-		function fn(data){    //处理返回数据的函数
-			//将取回来的data数据进行一些处理操作
-		}
+		$(“button”).click(function(){ <br/>
+			$.ajax({<br/>
+				type:'get',		//向服务器端发送get请求<br/>
+				url:url,	        //url的地址为http://localhost:3100/tcb/shops/pages/1<br/>
+				dataType:'text',    //服务器端返回的数据是text格式<br/>
+				success:function(data){<br/>
+					fn(data);     //将返回的数据传入fn函数<br/>
+				},<br/>
+				error:function(e){<br/>
+					console.log("发生错误！");<br/>
+				}<br/>
+			})<br/>
+		})	<br/>	
+		function fn(data){    //处理返回数据的函数<br/>
+			//将取回来的data数据进行一些处理操作<br/>
+		}<br/>
 	</code>
-	<p>除了这样设置之外，也可以通过<\script>引入一个回调函数来处理跨域问题。eg: 
+	<p>除了这样设置之外，也可以通过<\script>引入一个回调函数来处理跨域问题。eg: <br/>
 		<code>
-		$(".page_a").click(function(){
-			$.getJSON(url+"?callback=?",getDataFromServer);
-		}
-		function getDataFromServer(){
-			//处理数据的函数
-		}
+		$(".page_a").click(function(){<br/>
+			$.getJSON(url+"?callback=?",getDataFromServer);<br/>
+		}<br/>
+		function getDataFromServer(){<br/>
+			//处理数据的函数<br/>
+		}<br/>
 		</code>
-	//这个方法比较简单，这里就不累赘了。
+	//这个方法比较简单，这里就不累赘了。<br/>
 	</p>	
 	<p>
 		/*文稿持续更新中……待续……*/
