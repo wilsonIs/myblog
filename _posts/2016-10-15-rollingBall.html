@@ -33,7 +33,6 @@ category: discovery
 			var body = document.querySelector("body");
 			var box = document.querySelector("#box");
 			var bodyWidth = body.offsetWidth;
-
 			//随机函数
 			function randomFn(min,max){
 				return Math.floor(Math.random()*(max-min)+min);
@@ -61,8 +60,7 @@ category: discovery
 				//横向、纵向的偏移量
 				this.speedX = randomFn(-20,20);
 				this.speedY = randomFn(-20,20);
-			}
-			
+			}	
 			//小球移动的方法
 			Ball.prototype.moveBall = function(){
 				var _this = this;
@@ -96,15 +94,13 @@ category: discovery
 				}
 			}
 
-			
 			if(bodyWidth>800){
 				createBalls(80);
 			}else if(bodyWidth<=800&&bodyWidth>600){
 				createBalls(40);
 			}else{
 				createBalls(20);
-			} 
-			
+			} 	
 		</script>
 	</body>
 </html>
