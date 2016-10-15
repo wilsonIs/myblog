@@ -59,62 +59,67 @@ category: experience
 	<h2>三、	Express搭建服务器</h2>
 	<h3>3.1.	利用express模块搭建一个简易的web服务器</h3>
 	<p>
-		安装好express模块后，我们就可以着手搭建一个简单的web服务器,用于存储一些web
-文件，如网页、css、js、图像等。我们在myapp文件夹内新建一个myTcb文件夹，里面放置着项目的网页信息。
+	安装好express模块后，我们就可以着手搭建一个简单的web服务器,用于存储一些web文件，如网页、css、js、图像等。我们在myapp文件夹内新建一个myTcb文件夹，里面放置着项目的网页信息。
+	</p>
+	<p>
 	我们需要做的是，在myapp文件夹中新建一个service.js文件，这个文件的作用是用来实现web服务器的功能。
-	service.js的代码如下：
-
-	var express = require("express");//引入express模块
-var app = express();//表示创建一个express应用程序
-app.get("/",function(req,res){//获得用户的请求类型，还有post,delete等
-	res.send("hello app!");//响应信息
-});
-
-//注释：这里的“/”是指我们的根目录，意思是指当客户端请求访问根目录时，响应“hello app!”信息，我们可以在网页上看到该信息段。
-
-app.get("/app",function(req,res){//获得用户的请求类型
-	res.send("hello world!");//响应信息
-});
-
-//注释：这里的“/app”是指访问根目录下的app目录，响应“hello world!”
-
-app.use(express.static('myTcb'))
-
-//注释：启动服务器后，我们就可以在浏览器中输入http://localhost:3000/index.html
-来访问myTcb文件夹下的index.html文件。
-//注释：我们还可以这样设置一个虚拟路径：
-//app.use(“/static”,express.static(‘myTcb’),这样我们要访问index.html的路径就是 http://localhost:3000/static/index.html 这里的static并不存在，只是一个虚拟的路径，这样设置可以增加路径的层次关系。
-//这里的use是一个中间件，也可以理解为一个函数，用于执行一些请求
-//注释：通过Express内置的express.static可以方便地托管静态文件。
-//注释：按照我个人的理解就是开放访问该文件夹，并将该文件夹作为了浏览器访问的根目录
-
-// var server = app.listen(3000,function(){
-// 	//注释：这种方式就可以处理服务启动的一些信息
-// })
-
-app.listen(3000);
-	//监听端口3000的请求
+	service.js的代码如下：<br/>
+	<br/>
+	var express = require("express");//引入express模块<br/>
+	var app = express();//表示创建一个express应用程序<br/>
+	app.get("/",function(req,res){//获得用户的请求类型，还有post,delete等<br/>
+		res.send("hello app!");//响应信息<br/>
+	});
+	<br/>
+	//注释：这里的“/”是指我们的根目录，意思是指当客户端请求访问根目录时，响应“hello app!”信息，我们可以在网页上看到该信息段。<br/>
+	<br/>
+	app.get("/app",function(req,res){//获得用户的请求类型<br/>
+		res.send("hello world!");//响应信息<br/>
+	});<br/><br/>
+	<br/>
+	//注释：这里的“/app”是指访问根目录下的app目录，响应“hello world!” 
+	<br/><br/>
+	app.use(express.static('myTcb'))<br/><br/>
+	</p>
+	<p>
+	//注释：启动服务器后，我们就可以在浏览器中输入"http://localhost:3000/index.html"来访问myTcb文件夹下的index.html文件。<br/>
+	//注释：我们还可以这样设置一个虚拟路径：<br/>
+	//app.use(“/static”,express.static(‘myTcb’),这样我们要访问index.html的路径就是 http://localhost:3000/static/index.html 这里的static并不存在，只是一个虚拟的路径，这样设置可以增加路径的层次关系。<br/>
+	//这里的use是一个中间件，也可以理解为一个函数，用于执行一些请求<br/>
+	//注释：通过Express内置的express.static可以方便地托管静态文件。<br/>
+	//注释：按照我个人的理解就是开放访问该文件夹，并将该文件夹作为了浏览器访问的根目录<br/>
+	</p>
+	<p>
+	// var server = app.listen(3000,function(){<br/>
+	// 	//注释：这种方式就可以处理服务启动的一些信息<br/>
+	// })<br/><br/>
+	<p>
+	//app.listen(3000);<br/>
+	//监听端口3000的请求<br/><br/>
 	
-	设置完service.js的信息后，我们还需要将package.json文件中的信息设置一下：
-
-	"scripts": {
-   		 "start": "node service.js"
- 	 },
-
+	设置完service.js的信息后，我们还需要将package.json文件中的信息设置一下:
+	<code>
+		"scripts": {
+			"start": "node service.js"
+		},
+	</code>	
+	<br/>
 	//这里的信息必须设置，scripts是一个执行脚本，意思是通过start命令来执行service.js文件。
-	
+	</p>
+	<p>
 	以上信息设置完之后，我们就可以愉快的开启我们建立的web服务器了，只需进入myapp文件，在命令行输入：
 	
-	npm start
+	<code>
+		npm start
+	</code>
 	
 	//注释：启动web服务器命令。之后命令行提示 
+	<code>
+		myapp@0.1.1 start F:\MyWeb\myapp 
+		node service.js
+	</code>
+	//则表示服务器启动成功。服务器启动成功后，可以按下ctrl+c键停止该服务器。<br/><br/>
 
-myapp@0.1.1 start F:\MyWeb\myapp 
-node service.js
-
-//则表示服务器启动成功。服务器启动成功后，可以按下ctrl+c键停止该服务器。
-	
-	下面打开浏览器，输入http://localhost:3000/index.html就可以访问我们的网页啦，同一个局域网下的电脑都能够访问得到。这样我们就成功地设置了一个web服务器，用于模拟访问网页文件等数据。
-
+	下面打开浏览器，输入http://localhost:3000/index.html就可以访问我们的网页啦，同一个局域网下的电脑都能够访问得到。这样我们就成功地设置了一个web服务器，用于模拟访问网页文件等数据。<br/>
 	</p>
 </section>
