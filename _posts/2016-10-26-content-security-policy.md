@@ -224,7 +224,8 @@ hash值的例子如下，服务器给出一个允许执行的代码的hash值。
 ---
 
 
-# **声明：**本文转载至阮大神的博客：《[Content Security Policy 入门教程](http://www.ruanyifeng.com/blog/2016/09/csp.html?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)》 #
+# 声明：本文转载至阮大神的博客 
+《[Content Security Policy 入门教程](http://www.ruanyifeng.com/blog/2016/09/csp.html?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)》 
 
 
 
