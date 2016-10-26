@@ -4,19 +4,17 @@ title: Content Security Policy 入门教程
 category: experience
 ---
 
-<section>
 # Content Security Policy 入门教程 #
 
 跨域脚本攻击 XSS 是最常见、危害最大的网页安全漏洞。
 
-![xss](http://i.imgur.com/nf8fmxd.png)
+![](http://i.imgur.com/nf8fmxd.png)
 
 为了防止它们，要采取很多编程措施，非常麻烦。很多人提出，能不能根本上解决问题，浏览器自动禁止外部注入恶意脚本？
 
 这就是"网页安全政策"（Content Security Policy，缩写 CSP）的来历。本文详细介绍如何使用 CSP 防止 XSS 攻击。
 
-![csp](http://i.imgur.com/ur5Udqe.jpg)
-</section>
+![](http://i.imgur.com/ur5Udqe.jpg)
 
 # 一、简介 #
 ---
