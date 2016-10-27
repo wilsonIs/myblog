@@ -26,14 +26,20 @@
 	</footer>
 </div>
 
+<nav class="block">
+	<ul>
+		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/myblog/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>
 <aside>
 	<h2><a href="/myblog/"><i class="fa fa-home"></i></a> / <a href="/myblog/blog/">{{ site.blog.name }}</a><a href="/myblog/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
-	<nav class="block">
+	<!-- <nav class="block">
 		<ul>
 		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/myblog/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
 		{% endfor %}
 		</ul>
-	</nav>
+	</nav> -->
 	
 	<form action="/myblog/search/" class="block block-search">
 		<h3>搜索</h3>
@@ -62,10 +68,10 @@
 			<a href="http://elfjs.com/" target="_blank">elf+js</a>,
 			<a href="https://github.com/" target="_blank">GitHub</a>,
 			<a href="http://www.google.com/cse/" target="_blank" title="自定义站内搜索">Google Custom Search</a>,
-			<a href="http://en.gravatar.com/" target="_blank" title="统一头像标识服务">Gravatar</a>,
+			<!-- <a href="http://en.gravatar.com/" target="_blank" title="统一头像标识服务">Gravatar</a>, -->
 			<a href="http://softwaremaniacs.org/soft/highlight/en/">HighlightJS</a>,
 			<a href="https://github.com/mojombo/jekyll" target="_blank">jekyll</a>,
-			<a href="https://github.com/mytharcher/SimpleGray" target="_blank">SimpleGray</a>
+			<!-- <a href="https://github.com/mytharcher/SimpleGray" target="_blank">SimpleGray</a> -->
 		</p>
 	</div>
 </aside>

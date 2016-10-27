@@ -16,7 +16,7 @@ custom:
         experience: How To Do
         discovery: What's New
         criticism: What's Wrong
-        communication: Sharing Is Something
+        communication: Sharing
     categories:
       - name:  thinking
         title: Why...
@@ -31,7 +31,7 @@ custom:
         title: What's Wrong
 
       - name: communication
-        title: Sharing Is Something
+        title: Sharing
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
