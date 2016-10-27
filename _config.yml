@@ -1,6 +1,7 @@
 markdown: kramdown
 safe: false
 permalink: /blog/posts/:title
+baseurl: /myblog
 exclude:
   - README.md
 
