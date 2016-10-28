@@ -3,7 +3,7 @@ title: Jay Script网站
 category: works
 icon: code-fork
 tags: [demo]
-link: "https://wilsonis.github.io/myblog/html/jayScript/index.html"
+link: "https://wilsonis.github.io/myblog/html/jayScript/"
 figures:
   - src: "../works/img/jayScript.jpg"
     height: 350

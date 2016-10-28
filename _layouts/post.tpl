@@ -33,15 +33,13 @@ var duoshuoQuery = {short_name:"wilsonis"};
 <!-- 多说公共JS代码 end -->
 
 
-<div id="disqus_thread" class="comments"></div>
-
+<!-- <div id="disqus_thread" class="comments"></div>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-7231324007393765"
      data-ad-slot="7629180734"
      data-ad-format="auto"></ins>
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
