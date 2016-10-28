@@ -92,7 +92,7 @@ var site = {
 				hour = hour + (time.getMinutes() * 60 + time.getSeconds()) / 3600;
 
 				var n = (hour / 4 - factor) * factor;
-				n = Math.max(n, 0);
+				n = Math.max(n, 0.5);
 				n = Math.min(1, n);
 
 				return n;
@@ -100,6 +100,7 @@ var site = {
 
 			function setLightColor() {
 				elf('#page').css('background-color', 'rgba(85,85,85,' + getDayLight() + ')');
+				// elf('#card ul li').css('background-color', 'rgba(57,134,178,' + getDayLight() + ')');
 				textColorBase = 0x4d;
 				textColorDelta = 0x80;
 				textColor = Math.round(textColorBase + textColorDelta * getDayLight());
