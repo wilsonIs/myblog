@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="author" content="{{ site.meta.author.name }}" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 , user-scalable=no">
 <title>For A Better Life</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
@@ -518,6 +518,9 @@ aside .block a{margin:0;}
 		-ms-transform: rotate(45deg);
 		transform: rotate(45deg);
 	}
+	#timeline li.item figure img{
+		height: 160px;
+	}
 }
 
 /*评论模块的设置*/
@@ -605,9 +608,9 @@ aside .block a{margin:0;}
 				</div>
 				<div class="content">
 					<header>
-						<div class="links">
+					<!-- 	<div class="links">
 							{% if item.gitrepo %}<iframe src="http://ghbtns.com/github-btn.html?user=mytharcher&amp;repo={{item.gitrepo}}&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="82" height="20" class="link-item"></iframe>{% endif %}
-						</div>
+						</div> -->
 						<h3>{% if item.link %}<a href="{{item.link}}" target="_blank">{{item.title}}</a>{% else %}{{item.title}}{% endif %}</h3>
 						<p class="tags">
 						{% for tag in item.tags %}<span class="tag">{{tag}}</span>{% endfor %}
