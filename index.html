@@ -10,6 +10,7 @@
 <link rel="icon" href="favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" />
+<script src="./lib/jquery.min.js"></script>
 <style type="text/css">
 *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none;}
 
@@ -392,6 +393,25 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 	        };
 	    }
 	})();
+</script>
+
+<script>
+	var ipUrl = "http://ip.chinaz.com/getip.aspx?callback=dataHandler";
+	$.ajax({
+		type:"get",
+		url:ipUrl,
+		dataType:'JSONP',
+		success:function(data){
+			console.log(data)
+			dataHandler(data);
+		},
+	})
+
+	function dataHandler(data) {
+		var str = `<h2 data-translate="title" style="font-size:15px">来自<span style="color:#3986B2">`+data.address+`</span>的朋友，欢迎你！</h2>`;
+		$("#pictureDiv").append(str);
+	}
+
 </script>
 {% include baidu-stats.tpl %}
 </body>
