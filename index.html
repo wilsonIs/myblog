@@ -402,9 +402,11 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 		url:ipUrl,
 		dataType:'JSONP',
 		success:function(data){
-			console.log(data)
 			dataHandler(data);
 		},
+		error:function(data){
+			dataHandler(data);
+		}
 	})
 
 	function dataHandler(data) {
