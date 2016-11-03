@@ -396,16 +396,18 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 </script>
 
 <script>
+	var ipData;
 	var ipUrl = "http://ip.chinaz.com/getip.aspx?callback=dataHandler";
 	$.ajax({
 		type:"get",
 		url:ipUrl,
 		dataType:'JSONP',
 		success:function(data){
+			ipData = data;
 			dataHandler(data);
 		},
 		error:function(data){
-			dataHandler(data);
+			dataHandler(ipData);
 		}
 	})
 
