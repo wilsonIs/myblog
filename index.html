@@ -396,8 +396,8 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 </script>
 
 <script>
-	var ipUrl = "http://ip.chinaz.com/getip.aspx?callback=dataHandler";
-	$.ajax({
+	//var ipUrl = "http://ip.chinaz.com/getip.aspx?callback=dataHandler";
+/*	$.ajax({
 		type:"get",
 		url:ipUrl,
 		dataType:'JSONP',
@@ -407,14 +407,14 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 		error:function(data){
 			//
 		}
-	})
+	})*/
 
 	function dataHandler(data) {
 		var str = `<h2 data-translate="title" style="font-size:15px">来自<span style="color:#3986B2">`+data.address+`</span>的朋友，欢迎你！</h2>`;
 		$("#pictureDiv").append(str);
 	}
-
 </script>
+<script src='http://ip.chinaz.com/getip.aspx?callback=dataHandler'></script>
 {% include baidu-stats.tpl %}
 </body>
 </html>
