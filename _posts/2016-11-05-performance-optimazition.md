@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 前端优化最佳实践汇总
-category: exprience
+category: experience
 ---
 
 # 一、前端优化的目的#
