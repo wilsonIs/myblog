@@ -3,6 +3,7 @@ title: 工作
 category: works
 icon: building-o
 tags: [Job]
+link: "https://wilsonis.github.io/myblog/html/work/"
 figures:
   - src: "../works/img/nj.jpg"
     height: 300
