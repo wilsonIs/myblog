@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 前端性能测试工具介绍(一)
+title: 前端性能测试工具介绍
 category: experience
 ---
 
-## 前端性能测试工具Yslow,PageSpeed,WebPageTest ##
+## 前端性能测试工具Yslow,PageSpeed,WebPageTest等 ##
 
 本文重点讲解WebPagetest的使用方法，其它工具略提一二。
 
