@@ -20,9 +20,17 @@ category: experience
 
 前面的一篇文章[Chrome WebInspector对网页前端性能的简单的分析](https://wilsonis.github.io/myblog//blog/posts/shein-performance-analysis)也对Chorme自带的分析工具的使用进行了简单的介绍，有兴趣的同学可以看看。
 
-### 3. WebPagetest ###
+### 3. showslow ###
 
-测试地址：[WebPagetest](http://webpagetest.org/)，在线测试web应用。
+测试地址：[showslow](http://www.showslow.com),在线测试web应用。
+
+### 4. HttpWatch和DynaTrace's Ajax ###
+
+据说还有这两个测试工具,不过我不熟,有机会找来试试。
+
+### 5. WebPagetest ###
+
+测试地址：[WebPagetest](http://webpagetest.org/),在线测试web应用。
 
 直接输入需要测试的网页，点击run test，等待一段时间后，就能得到测试结果。
 
