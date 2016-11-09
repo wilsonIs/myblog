@@ -1,12 +1,12 @@
 markdown: kramdown
 safe: false
 permalink: /blog/posts/:title
-baseurl: /
+baseurl: /myblog
 exclude:
   - README.md
 
 blog:
-    host: wilsonis.github.io/
+    host: wilsonis.github.io/myblog
     name: 月溅星河长路漫漫
     desc: 读读写写
 
