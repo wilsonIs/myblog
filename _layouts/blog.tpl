@@ -9,9 +9,9 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 <link href="http://{{ site.blog.host }}/blog/feed.xml" rel="alternate" title="{{ site.blog.name }}" type="application/atom+xml" />
-<link rel="stylesheet" href="/myblog/lib/font-awesome/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="/myblog/assets/css/blog.css" />
-<link rel="stylesheet" type="text/css" href="/myblog/assets/css/code/sunburst.css" />
+<link rel="stylesheet" href="/lib/font-awesome/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/blog.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/code/sunburst.css" />
 {% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ style }}" />
 {% endfor %}
 </head>
@@ -22,26 +22,26 @@
 	{{ content }}
 
 	<footer>
-		<p>&copy; Since 2016 <a href="http://wilsonis.github.io/myblog/">wilsonis.github.io/myblog</a></p>
+		<p>&copy; Since 2016 <a href="http://wilsonis.github.io/myblog/">wilsonisonly.com</a></p>
 	</footer>
 </div>
 
 <nav class="block">
 	<ul>
-		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/myblog/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
+		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
 		{% endfor %}
 	</ul>
 </nav>
 <aside>
-	<h2><a href="/myblog/"><i class="fa fa-home"></i></a> / <a href="/myblog/blog/">{{ site.blog.name }}</a><a href="/myblog/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
+	<h2><a href="/"><i class="fa fa-home"></i></a> / <a href="/blog/">{{ site.blog.name }}</a><a href="/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
 	<!-- <nav class="block">
 		<ul>
-		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/myblog/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
+		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
 		{% endfor %}
 		</ul>
 	</nav> -->
 	
-	<form action="/myblog/search/" class="block block-search">
+	<form action="/search/" class="block block-search">
 		<h3>搜索</h3>
 		<p><input type="search" name="q" placeholder="输入关键词按回车搜索" /></p>
 	</form>
@@ -76,9 +76,9 @@
 	</div>
 </aside>
 
-<script type="text/javascript" src="/myblog/lib/elf/elf-0.5.0.min.js"></script>
-<script src="/myblog/lib/highlight/highlight.min.js"></script>
-<script src="/myblog/assets/js/site.js"></script>
+<script type="text/javascript" src="/lib/elf/elf-0.5.0.min.js"></script>
+<script src="/lib/highlight/highlight.min.js"></script>
+<script src="/assets/js/site.js"></script>
 {% for script in page.scripts %}<script src="{{ script }}"></script>
 {% endfor %}
 <script>
