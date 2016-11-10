@@ -6,7 +6,7 @@ exclude:
   - README.md
 
 blog:
-    host: wilsonis.github.io/myblog
+    host: wilsonis.github.io/
     name: 月溅星河长路漫漫
     desc: 读读写写
 
