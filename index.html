@@ -12,12 +12,12 @@
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" />
 <script src="./lib/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="./widget/css/RongIMWidget.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="./widget/css/RongIMWidget.css"/>
 <script>
 	if(navigator.userAgent.indexOf("MSIE 9")!=-1){
 	  window.WEB_XHR_POLLING = true;
 	}
-</script>
+</script> -->
 <style type="text/css">
 *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none;}
 
@@ -298,7 +298,8 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 	</div>
 </div>
 
-<!-- 在线聊天模块start -->
+
+<!-- 在线聊天模块start
 <div ng-app="demo">
       <div  ng-controller="main">
             <rong-widget></rong-widget>
@@ -310,8 +311,9 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 <script src="./widget/RongIMWidget.js"></script>
 <script src="./lib/websocket/cookie.js"></script>
 <script src="./customerservice/index.js"></script>
-<!-- <script src="./customerservice/kefu.js"></script> -->
-<!-- 在线聊天模块end -->
+<script src="./customerservice/kefu.js"></script>
+在线聊天模块end
+ -->
 
 <script type="text/javascript" src="/lib/elf/elf-0.5.0.min.js"></script>
 <script type="text/javascript" src="/lib/qrcode.min.js"></script>
@@ -436,6 +438,7 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 	}
 </script>
 <script  type="text/javascript" src='http://ip.chinaz.com/getip.aspx?callback=dataHandler'></script>
+<script src="http://www.sobot.com/chat/pc/pc.min.js?sysNum=eb8f4828ce9c4f208881ad6a1cb5ad04" id="zhichiload" ></script>
 {% include baidu-stats.tpl %}
 </body>
 </html>
