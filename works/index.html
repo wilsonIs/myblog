@@ -31,17 +31,7 @@ input,textarea{resize:none;}
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fa-addition';
-    src: url('http://mbed.qiniudn.com/font/fa-addition.svg?81684682#fa-addition') format('svg');
-  }
-}
-*/
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fa-addition";
   font-style: normal;
@@ -608,9 +598,6 @@ aside .block a{margin:0;}
 				</div>
 				<div class="content">
 					<header>
-					<!-- 	<div class="links">
-							{% if item.gitrepo %}<iframe src="http://ghbtns.com/github-btn.html?user=mytharcher&amp;repo={{item.gitrepo}}&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="82" height="20" class="link-item"></iframe>{% endif %}
-						</div> -->
 						<h3>{% if item.link %}<a href="{{item.link}}" target="_blank">{{item.title}}</a>{% else %}{{item.title}}{% endif %}</h3>
 						<p class="tags">
 						{% for tag in item.tags %}<span class="tag">{{tag}}</span>{% endfor %}

@@ -12,12 +12,6 @@
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" />
 <script src="./lib/jquery.min.js"></script>
-<!-- <link rel="stylesheet" type="text/css" href="./widget/css/RongIMWidget.css"/>
-<script>
-	if(navigator.userAgent.indexOf("MSIE 9")!=-1){
-	  window.WEB_XHR_POLLING = true;
-	}
-</script> -->
 <style type="text/css">
 *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none;}
 
@@ -238,40 +232,6 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 	#card li.half{line-height: 70px;}
 	#card li.quarter{line-height: 70px;}
 }
-/*
-@media (min-width: 320px) and (max-width: 450px) {
-	#card{width: 305px; height: 620px;}
-	#link-blog{left: 0; top: 210px;}
-	li#link-mail.half{left: 0; top: 420px; width: 305px;}
-	#link-wechat{left: 210px; top: 210px;}
-	#link-github{left: 210px; top: 0;}
-	#link-file-image-o{left: 210px; top: 105px;}
-	#link-more{left: 210px; top: 315px;}
-}
-
-@media (max-width: 319px) {
-	#card{width: 0; height: 0; padding: 10px;}
-	#card ul{width: 0; height: 0; padding: 84% 50%;}
-	#card li{width: 0; height: 0; padding: 32%;
-		-webkit-transition: background-color ease .3s;
-		-moz-transition: background-color ease .3s;
-		-ms-transition: background-color ease .3s;
-		transition: background-color ease .3s;
-	}
-	#card li.half{width: 0; height: 0; padding: 16% 50%;}
-	#card li.quarter{width: 0; height: 0; padding: 16%;}
-	#card li a{
-		position: absolute;
-		left: 0;
-		top: 0;
-	}
-	#link-blog{left: 0; top: 39.2857%;}
-	li#link-mail.half{left: 0; top: 78.5714%;}
-	#link-wechat{left: 39.2857%; top: 39.2857%;}
-	#link-github{left: 39.2857%; top: 0;}
-	#link-file-image-o{left: 39.2857%; top: 20.2381%;}
-	#link-more{left: 39.2857%; top: 60.7123%;}
-}*/
 </style>
 </head>
 
@@ -297,23 +257,6 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 	<div id="pictureDiv">
 	</div>
 </div>
-
-
-<!-- 在线聊天模块start
-<div ng-app="demo">
-      <div  ng-controller="main">
-            <rong-widget></rong-widget>
-      </div>
-</div>
-
-<script src="./lib/websocket/jquery-1.11.1.min.js"></script>
-<script src="./lib/websocket/angular.js"></script>
-<script src="./widget/RongIMWidget.js"></script>
-<script src="./lib/websocket/cookie.js"></script>
-<script src="./customerservice/index.js"></script>
-<script src="./customerservice/kefu.js"></script>
-在线聊天模块end
- -->
 
 <script type="text/javascript" src="/lib/elf/elf-0.5.0.min.js"></script>
 <script type="text/javascript" src="/lib/qrcode.min.js"></script>
@@ -419,19 +362,6 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 </script>
 
 <script>
-	//var ipUrl = "http://ip.chinaz.com/getip.aspx?callback=dataHandler";
-/*	$.ajax({
-		type:"get",
-		url:ipUrl,
-		dataType:'JSONP',
-		success:function(data){
-			dataHandler(data);
-		},
-		error:function(data){
-			//
-		}
-	})*/
-
 	function dataHandler(data) {
 		var str = `<h2 data-translate="title" style="font-size:15px">来自<span style="color:#3986B2">`+data.address+`</span>的朋友，欢迎你！</h2>`;
 		$("#pictureDiv").append(str);
