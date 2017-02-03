@@ -32,7 +32,7 @@ html{background-image: url(./bg-tool.jpg);}
 a{color: #eee; text-decoration: none;}
 a:hover{color: #fff; text-decoration: underline;}
 
-#card{position: relative; margin: auto;
+#card{z-index:2;position: relative; margin: auto;
 	-webkit-transition: width ease .5s, height ease .5s;
 	-moz-transition: width ease .5s, height ease .5s;
 	-ms-transition: width ease .5s, height ease .5s;
@@ -223,7 +223,7 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 	#link-github{left: 37.5%; top: 40%;}
 	#link-file-image-o{left: 25.5%; top: 65%;}
 	#link-more{
-		left: 51%; 
+		left: 51%;
 		top: 65%;
 	}
 }
@@ -231,6 +231,13 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 	#card li{line-height: 147px;}
 	#card li.half{line-height: 70px;}
 	#card li.quarter{line-height: 70px;}
+}
+
+.particles-js-canvas-el{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 </style>
 </head>
@@ -258,6 +265,10 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 	</div>
 </div>
 
+<!-- <div id="particles-js"></div> -->
+
+<script src="lib/particles/particles.js"></script>
+<script src="lib/particles/app.js"></script>
 <script type="text/javascript" src="/lib/elf/elf-0.5.0.min.js"></script>
 <script type="text/javascript" src="/lib/qrcode.min.js"></script>
 <script type="text/javascript" src="/assets/js/site.js"></script>
@@ -288,12 +299,12 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 
 	    //读取本地存储
 		readStorage();
-		
+
 		function readStorage () {
 			if (window.localStorage) {
 				//虚拟节点
 				var frg = document.createDocumentFragment();
-				
+
 				for (var key in window.localStorage) {
 					var exp = /^(pic_)/i;
 					if (exp.test(key)) {
@@ -345,7 +356,7 @@ li#link-more:hover i{opacity: 1; font-size: inherit; color: #3986B2;}
 								window.localStorage.setItem("pic_" + obj.date, JSON.stringify(obj));
 	                        };
 	                        fileReader.readAsDataURL(file);
-	                        
+
 	                    }
 	                    catch (e) {
 	                        //

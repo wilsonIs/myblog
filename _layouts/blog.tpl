@@ -14,6 +14,13 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/code/sunburst.css" />
 {% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ style }}" />
 {% endfor %}
+<style>
+	.particles-js-canvas-el {
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	}
+</style>
 </head>
 
 <body class="{{ layout.pageClass }}">
@@ -32,7 +39,7 @@
 		{% endfor %}
 	</ul>
 </nav>
-<aside>
+<aside id="page">
 	<h2><a href="/"><i class="fa fa-home"></i></a> / <a href="/blog/">{{ site.blog.name }}</a><a href="/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
 	<!-- <nav class="block">
 		<ul>
@@ -40,12 +47,12 @@
 		{% endfor %}
 		</ul>
 	</nav> -->
-	
+
 	<form action="/search/" class="block block-search">
 		<h3>搜索</h3>
 		<p><input type="search" name="q" placeholder="输入关键词按回车搜索" /></p>
 	</form>
-	
+
 	<div class="block block-about">
 		<h3>关于</h3>
 		<figure>
@@ -55,12 +62,12 @@
 		</figure>
 		<p>内容为空</p>
 	</div>
-	
+
 	<div class="block block-license">
 		<h3>版权申明</h3>
 		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/cn/" target="_blank" class="hide-target-icon" title="本站(博客)作品全部采用知识共享署名-非商业性使用-禁止演绎 2.5 中国大陆许可协议进行许可。转载请通知作者并注明出处。"><img alt="知识共享许可协议" src="http://i.creativecommons.org/l/by-nc-nd/2.5/cn/88x31.png" /></a></p>
 	</div>
-	
+
 	<div class="block block-thank">
 		<h3>Powered by</h3>
 		<p>
@@ -76,6 +83,8 @@
 	</div>
 </aside>
 
+<script src="../lib/particles/particles.js"></script>
+<script src="../lib/particles/app.js"></script>
 <script type="text/javascript" src="/lib/elf/elf-0.5.0.min.js"></script>
 <script src="/lib/highlight/highlight.min.js"></script>
 <script src="/assets/js/site.js"></script>
