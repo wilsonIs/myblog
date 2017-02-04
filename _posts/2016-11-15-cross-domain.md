@@ -4,8 +4,6 @@ title: 常用跨域方法总结
 category: experience
 ---
 
-## 前端跨域解决方案 ##
-
 ### 1. 什么是跨域 ###
 
 同源：相同protocal, domain, port的情况下，则为同源.
@@ -22,7 +20,7 @@ nodejs的service.js中设置：
 		res.header("Access-Control-Allow-Origin","*");   //接受任意域名的请求
 		res.header("Access-Control-Allow-Header","X-Requested-With");
 			//额外发送的头信息字段，用以区分传统请求和ajax请求
-		res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS"); 
+		res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
 			//允许的请求方式
 		res.header("Content-Type","application/json;charset=utf-8");
 			//请求的数据类型
@@ -42,7 +40,7 @@ a.com/index.html的设置:
 	<script type="text/javascript">
 		window.onload = function() {
 			var ifr = document.getElementById('ifr');
-			var targetOrigin = 'http://b.com';  
+			var targetOrigin = 'http://b.com';
 				// 若写成'http://b.com/c/proxy.html'效果一样
 	           // 若写成'http://c.com'就不会执行postMessage了
 			ifr.contentWindow.postMessage('I was there!', targetOrigin);
@@ -56,7 +54,7 @@ b.com/index.html的设置:
      		   // 通过origin属性判断消息来源地址
       		  if (event.origin == 'http://a.com') {
          		 alert(event.data);    // 弹出"I was there!"
-           		 alert(event.source);  
+           		 alert(event.source);
 					// 对a.com、index.html中window对象的引用
                     // 但由于同源策略，这里event.source不可以访问window对象
     		    }

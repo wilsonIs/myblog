@@ -4,13 +4,10 @@ title: 前端性能测试工具介绍
 category: experience
 ---
 
-## 前端性能测试工具Yslow,PageSpeed,WebPageTest等 ##
+本文重点讲解WebPagetest的使用方法，其它工具略提一二。测试网站以[国内最大的跨境电商平台shein](http://shein.com)为例。
 
-本文重点讲解WebPagetest的使用方法，其它工具略提一二。
 
-测试网站以[国内最大的跨境电商平台shein](http://shein.com)为例。
-
-### 1. 雅虎Yslow ###
+### 1. 雅虎Yslow
 
 下载地址：[雅虎Yslow](http://yslow.org/)，选择对应的浏览器下载安装插件使用。重启浏览器，按F12，在Firebug中可以看到安装好的Yslow,点击Run Test，可以得到分析后的结果。
 
