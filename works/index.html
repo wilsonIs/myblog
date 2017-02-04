@@ -524,6 +524,21 @@ aside .block a{margin:0;}
     position: absolute;
     left: 0;
     top: 0;
+    z-index: -1;
+}
+
+/*最近访客的设置*/
+#visitors{
+	text-align: center;
+}
+#visitors p{
+	font-weight: bold;
+    font-size: 16px;
+    padding: 20px;
+}
+#ds-recent-visitors {
+    display: flex;
+    justify-content: center;
 }
 
 </style>
@@ -569,25 +584,20 @@ aside .block a{margin:0;}
 		</ul>
 	</div>
 
-	<!-- <div id="tools" class="block">
-		<h3 data-translate="using-tools">使用工具</h3>
-		<ul>
-			<li><i class="fa fa-apple"></i><span>Mac</span></li>
-			<li><i>S</i><span>Sublime</span></li>
-			<li><i class="fa fa-git"></i><span>Git</span></li>
-			<li><i class="icon-chrome"></i><span>Chrome</span></li>
-			<li><i class="icon-firefox"></i><span>Firefox</span></li>
-			<li><i class="fa fa-google"></i><span>Google</span></li>
-			<li><i class="fa fa-github"></i><span>GitHub</span></li>
-			<li><i class="fa fa-bitbucket"></i><span>BitBucket</span></li>
-			<li><i class="fa fa-trello"></i><span>Trello</span></li>
-			<li><i class="fa fa-stack-overflow"></i><span>StackOverflow</span></li>
-		</ul>
-	</div> -->
-
 	<div id="contact" class="block">
 		<p><span data-translate="contact-me-description">My Contact:</span> <a href="mailto:" class="mail"></a></p>
 	</div>
+
+	<!--  最近访客 -->
+	<div id="visitors" class="block">
+		<p>最近访客</p>
+		<ul class="ds-recent-visitors" data-num-items="10"></ul>
+		<p>你是第
+			<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3212244&c=9637045" alt="AmazingCounters.com">
+			位访客
+		</p>
+	</div>
+
 </aside>
 
 <div class="main">

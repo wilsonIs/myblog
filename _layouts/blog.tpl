@@ -19,6 +19,21 @@
 	    position: absolute;
 	    left: 0;
 	    top: 0;
+	    z-index: -1;
+	}
+
+	/*最近访客的设置*/
+	#visitors{
+		text-align: center;
+	}
+	#visitors p{
+		font-weight: bold;
+	    font-size: 16px;
+	    padding: 20px;
+	}
+	#ds-recent-visitors {
+	    display: flex;
+	    justify-content: center;
 	}
 </style>
 </head>
@@ -81,8 +96,31 @@
 			<!-- <a href="https://github.com/mytharcher/SimpleGray" target="_blank">SimpleGray</a> -->
 		</p>
 	</div>
+
+	<!--  最近访客 -->
+	<div id="visitors" class="block">
+		<p>最近访客</p>
+		<ul class="ds-recent-visitors" data-num-items="10"></ul>
+		<p>你是第
+			<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3212244&c=9637045" alt="AmazingCounters.com">
+			位访客
+		</p>
+	</div>
 </aside>
 
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"wilsonis"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0]
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+	</script>
+<!-- 多说公共JS代码 end -->
 <script src="../lib/particles/particles.js"></script>
 <script src="../lib/particles/app.js"></script>
 <script type="text/javascript" src="/lib/elf/elf-0.5.0.min.js"></script>
