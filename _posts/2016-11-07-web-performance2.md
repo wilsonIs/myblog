@@ -4,8 +4,9 @@ title: 前端性能测试工具介绍
 category: experience
 ---
 
-本文重点讲解WebPagetest的使用方法，其它工具略提一二。测试网站以[国内最大的跨境电商平台shein](http://shein.com)为例。
+本文重点讲解WebPagetest的使用方法，其它工具略提一二。
 
+测试网站以[国内最大的跨境电商平台shein](http://shein.com)为例。
 
 ### 1. 雅虎Yslow
 
