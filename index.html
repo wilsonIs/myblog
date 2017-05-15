@@ -269,7 +269,6 @@
         position: absolute;
         left: 10%;
         width: 80%;
-        /*background-color: #ccc;*/
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -277,7 +276,6 @@
 
     #pictureDiv img {
         vertical-align: middle;
-        /*width: 4rem;*/
         height: 4rem;
         display: flex;
         flex-shrink: 1;
@@ -437,16 +435,13 @@
         #pictureDiv {
             height: 2rem;
             position: absolute;
-            /*left: 10%;*/
             width: 80%;
-            /*background-color: #ccc;*/
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
         #pictureDiv img {
             vertical-align: middle;
-            /*width: 1rem;*/
             height: 2rem;
             display: flex;
             flex-shrink: 1;
@@ -533,7 +528,6 @@
     <div id="page">
         <div id="card">
             <header>
-                <!-- <img src="{{site.meta.gravatar}}{{site.meta.author.gravatar}}?s=80" width="80" height="80" /> -->
                 <img src="potrait.png" width="80" height="80" />
                 <h1 data-translate="name">张涛</h1>
                 <h2 data-translate="title">前端开发工程师</h2>
@@ -541,8 +535,6 @@
             <ul>
                 <li id="link-works"><a href="works/"><i class="fa fa-briefcase"></i><span data-translate="works">作品</span></a></li>
                 <li id="link-blog"><a href="blog/"><i class="fa fa-rss"></i><span data-translate="blog">博客</span></a></li>
-                <!-- <li id="link-mail" class="half"><a href="mailto:" class="mail"><i class="fa fa-envelope"></i><span></span></a></li> -->
-                <!-- <li id="link-wechat" class="quarter"><a href="http://weixin.qq.com/r/8mv27ijEIHVfrWyN9z7g" title="WeChat"><i class="fa fa-weixin"></i><span></span></a></li> -->
                 <li id="link-github" class="quarter"><a href="https://github.com/wilsonis" target="_blank"><i class="fa fa-github"></i><span>GitHub</span></a></li>
                 <li id="link-file-image-o" class="quarter"><a href="#"><i class="fa fa-file-image-o"></i><span data-translate="file-image-o">上传<input type="file" id="take-picture" accept="image/*"></span></a></li>
                 <li id="link-more" class="quarter"><a href="#more"><i class="fa fa-ellipsis-h"></i></a></li>
@@ -551,7 +543,6 @@
         <div id="pictureDiv">
         </div>
     </div>
-    <!-- <div id="particles-js"></div> -->
     <script src="lib/particles/particles.js"></script>
     <script src="lib/particles/app.js"></script>
     <script type="text/javascript" src="/lib/elf/elf-0.5.0.min.js"></script>
@@ -660,25 +651,8 @@
     }
     </script>
     <script type="text/javascript" src='http://ip.chinaz.com/getip.aspx?callback=dataHandler'></script>
-    <script>
-    var urlPc = "http://www.sobot.com/chat/pc/pc.min.js?sysNum=eb8f4828ce9c4f208881ad6a1cb5ad04";
-
-    var urlH5 = "http://www.sobot.com/chat/h5/h5.min.js?sysNum=eb8f4828ce9c4f208881ad6a1cb5ad04";
-
-    var id = "zhichiload";
-
-    var script = document.createElement("script");
-    var body = document.getElementsByTagName("body")[0];
-
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
-        script.setAttribute("src", urlH5);
-    } else {
-        script.setAttribute("src", urlPc);
-    }
-    script.setAttribute("id", id);
-    body.appendChild(script);
-    </script>
     {% include baidu-stats.tpl %}
+    {% include sobot-chat.tpl %}
 </body>
 
 </html>

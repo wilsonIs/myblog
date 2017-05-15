@@ -109,23 +109,15 @@
     .icon-firefox:before {
         content: '\e802';
     }
-    /* '' */
-
     .icon-chrome:before {
         content: '\e803';
     }
-    /* '' */
-
     .icon-google:before {
         content: '\e800';
     }
-    /* '' */
-
     .icon-git:before {
         content: '\e801';
     }
-    /* '' */
-
     .fa:before {
         display: inline-block;
         width: 1em;
@@ -613,16 +605,8 @@
             height: 160px;
         }
     }
-    /*评论模块的设置*/
 
-    #ds-thread {
-        border-top: 1px solid #999;
-    }
-
-    #ds-reset {
-        margin-top: 2rem;
-    }
-
+    /*particles*/
     .particles-js-canvas-el {
         position: absolute;
         left: 0;
@@ -652,7 +636,6 @@
     <aside id="page">
         <h1>
 		<a href="/">
-			<!-- <img src="{{site.meta.gravatar}}{{site.meta.author.gravatar}}?s=32" width="32" height="32" /> -->
 			<img src="../potrait.png" width="32" height="32" />
 		</a><span>For A Better Life</span>
 	</h1>
@@ -741,6 +724,7 @@
     <script type="text/javascript" src="../lib/elf/elf-0.5.0.min.js"></script>
     <script type="text/javascript" src="../assets/js/site.js"></script>
     {% include baidu-stats.tpl %}
+    {% include sobot-chat.tpl %}
 </body>
 
 </html>

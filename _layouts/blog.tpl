@@ -56,22 +56,10 @@
 </nav>
 <aside id="page">
 	<h2><a href="/"><i class="fa fa-home"></i></a> / <a href="/blog/">{{ site.blog.name }}</a><a href="/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
-	<!-- <nav class="block">
-		<ul>
-		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/blog/category/{{ category.name }}/">{{ category.title }}</a></li>
-		{% endfor %}
-		</ul>
-	</nav> -->
-
-	<form action="/search/" class="block block-search">
-		<h3>搜索</h3>
-		<p><input type="search" name="q" placeholder="输入关键词按回车搜索" /></p>
-	</form>
 
 	<div class="block block-about">
 		<h3>关于</h3>
 		<figure>
-			<!-- {% if site.meta.author.gravatar %}<img src="{{ site.meta.gravatar}}{{ site.meta.author.gravatar }}?s=48" />{% endif %} -->
 			<img src="../potrait.png" width="80" height="80" />
 			<figcaption><strong>{{ site.meta.author.name }}</strong></figcaption>
 		</figure>
@@ -86,14 +74,10 @@
 	<div class="block block-thank">
 		<h3>Powered by</h3>
 		<p>
-			<a href="http://disqus.com/" target="_blank" title="云评论服务">Disqus</a>,
 			<a href="http://elfjs.com/" target="_blank">elf+js</a>,
 			<a href="https://github.com/" target="_blank">GitHub</a>,
-			<a href="http://www.google.com/cse/" target="_blank" title="自定义站内搜索">Google Custom Search</a>,
-			<!-- <a href="http://en.gravatar.com/" target="_blank" title="统一头像标识服务">Gravatar</a>, -->
 			<a href="http://softwaremaniacs.org/soft/highlight/en/">HighlightJS</a>,
 			<a href="https://github.com/mojombo/jekyll" target="_blank">jekyll</a>,
-			<!-- <a href="https://github.com/mytharcher/SimpleGray" target="_blank">SimpleGray</a> -->
 		</p>
 	</div>
 
@@ -108,19 +92,6 @@
 	</div>
 </aside>
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"wilsonis"};
-		(function() {
-			var ds = document.createElement('script');
-			ds.type = 'text/javascript';ds.async = true;
-			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-			ds.charset = 'UTF-8';
-			(document.getElementsByTagName('head')[0]
-			 || document.getElementsByTagName('body')[0]).appendChild(ds);
-		})();
-	</script>
-<!-- 多说公共JS代码 end -->
 <script src="../lib/particles/particles.js"></script>
 <script src="../lib/particles/app.js"></script>
 <script type="text/javascript" src="/lib/elf/elf-0.5.0.min.js"></script>
@@ -130,13 +101,11 @@
 {% endfor %}
 <script>
 site.URL_GOOGLE_API = '{{site.meta.gapi}}';
-// site.URL_DISCUS_COMMENT = '{{ site.meta.author.disqus }}' ? 'http://{{ site.meta.author.disqus }}.{{ site.meta.disqus }}' : '';
 
 site.VAR_SITE_NAME = '{{ site.blog.name }}';
-site.VAR_GOOGLE_CUSTOM_SEARCH_ID = '{{ site.meta.author.gcse }}';
-site.TPL_SEARCH_TITLE = '#{0} / 搜索：#{1}';
 site.VAR_AUTO_LOAD_ON_SCROLL = {{ site.custom.scrollingLoadCount }};
 </script>
 {% include baidu-stats.tpl %}
+{% include sobot-chat.tpl %}
 </body>
 </html>
