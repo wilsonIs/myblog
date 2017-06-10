@@ -39,11 +39,4 @@ meta:
     author:
         name: wilsonIsOnly
         email: zhangtao522009@163.com
-        #disqus: comments                           # Disqus缩略标识
-        gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID
         github: wilsonIs                            # GitHub账号
-        gravatar: da684d962367463945d2693ab82d3410  # Gravatar头像标识
-
-    #disqus: disqus.com/embed.js                    # Disqus评论的JS地址
-    gapi: http://www.google.com/jsapi               # Google API地址
-    gravatar: http://en.gravatar.com/avatar/        # Gravatar头像服务器地址

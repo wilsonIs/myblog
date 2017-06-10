@@ -63,7 +63,6 @@
 			<img src="../potrait.png" width="80" height="80" />
 			<figcaption><strong>{{ site.meta.author.name }}</strong></figcaption>
 		</figure>
-		<p>内容为空</p>
 	</div>
 
 	<div class="block block-license">
