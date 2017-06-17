@@ -3,7 +3,6 @@ elf().getPosition = elf.dom.BoxModel.getPosition = js.dom.BoxModel.getPosition =
 
     var cStyle = el.currentStyle || document.defaultView.getComputedStyle(el, null);
 
-    // var layoutBWX = 0, layoutBWY = 0;
     var isWebkit = navigator.userAgent.match(/Chrome|Safari/);
 
     if (!refer) {
@@ -26,9 +25,6 @@ elf().getPosition = elf.dom.BoxModel.getPosition = js.dom.BoxModel.getPosition =
                 }
             }
         }
-        //避免ie和ff计算body的offsetLeft不一致
-        //		pos.x = el.offsetLeft - node.offsetLeft;//-(parseInt(cStyle.marginLeft)||0);
-        //		pos.y = el.offsetTop - node.offsetTop;//-(parseInt(cStyle.marginTop)||0);
         if (cStyle.position == 'static' && el.currentStyle) {
             pos.x += (parseInt(document.body.currentStyle.marginLeft, 10) || 0) * 2;
             pos.y += (parseInt(document.body.currentStyle.marginTop, 10) || 0) * 2;
@@ -317,12 +313,6 @@ site.ScrollFollow = elf().Class({
                 props.position = 'fixed';
                 props.top = this.marginTop + 'px';
                 props.left = startLeft + 'px';
-                // var screenSub = pageWidth - contentWidth - 46;
-                // var sideOffset = Math.max(0, screenSub) + (this.sideOffset + docElem.scrollLeft * side);
-                // if (pageWidth < contentWidth && side > 0) {
-                // 	sideOffset += screenSub;
-                // }
-                // props[this.side] = sideOffset + 'px';
             }
         } else if (pageWidth > this.minWidth) {
             props.position = 'absolute';
@@ -347,7 +337,7 @@ elf(function() {
     }
     site.Translation.translate(navigator.language || 'zh-CN');
 
-    elf('a.mail').attr('href', elf().template('mailto:#{0}@#{1}', 'mytharcher', 'gmail.com'));
+    elf('a.mail').attr('href', elf().template('mailto:#{0}@#{1}', 'zhangtao522009', '163.com'));
 
     var module = document.body.className.replace(/page-type-/g, '').split(' ');
     module.forEach(function(item) {
