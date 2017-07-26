@@ -42,7 +42,7 @@
 
 <div class="main">
 	{{ content }}
-
+	<div id="disqus_thread"></div>
 	<footer>
 		<p>&copy; Since 2016 <a href="http://wilsonis.github.io/myblog/">wilsonisonly.com</a></p>
 	</footer>
@@ -106,5 +106,6 @@ site.VAR_AUTO_LOAD_ON_SCROLL = {{ site.custom.scrollingLoadCount }};
 </script>
 {% include baidu-stats.tpl %}
 {% include sobot-chat.tpl %}
+{% include disqus.tpl %}
 </body>
 </html>
