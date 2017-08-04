@@ -337,7 +337,7 @@ elf(function() {
     }
     site.Translation.translate(navigator.language || 'zh-CN');
 
-    elf('a.mail').attr('href', elf().template('mailto:#{0}@#{1}', 'zhangtao522009', '163.com'));
+    elf('a.mail').attr('href', elf().template('mailto:#{0}@#{1}', 'me', 'wilsonisonly.com'));
 
     var module = document.body.className.replace(/page-type-/g, '').split(' ');
     module.forEach(function(item) {
