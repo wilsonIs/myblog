@@ -19,7 +19,7 @@ category: experience
 
     cd "进入博客根目录"
     git config --local user.name "wilsonIs"
-    git config --local user.email "zhangtao522009@163.com"
+    git config --local user.email "me@wilsonisonly.com"
 
     当然ssh的配置在这之前已经设置好了。
 
