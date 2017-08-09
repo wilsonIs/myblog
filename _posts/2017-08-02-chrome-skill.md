@@ -4,12 +4,11 @@ title: 掌握Chrome开发工具（转）
 category: discovery
 ---
 
-# 掌握Chrome开发工具：新一代前端开发技术
 
-> 本文转载自：[众成翻译](http://www.zcfy.cc)
-> 译者：[一只叫做兰胖的食人魔魔法师](http://www.zcfy.cc/@mirlysky)
-> 链接：[http://www.zcfy.cc/article/3722](http://www.zcfy.cc/article/3722)
-> 原文：[https://medium.freecodecamp.com/mastering-chrome-developer-tools-next-level-front-end-development-techniques-3ac0b6fe8a3](https://medium.freecodecamp.com/mastering-chrome-developer-tools-next-level-front-end-development-techniques-3ac0b6fe8a3)
+本文转载自：[众成翻译](http://www.zcfy.cc)
+译者：[一只叫做兰胖的食人魔魔法师](http://www.zcfy.cc/@mirlysky)
+链接：[http://www.zcfy.cc/article/3722](http://www.zcfy.cc/article/3722)
+原文：[https://medium.freecodecamp.com/mastering-chrome-developer-tools-next-level-front-end-development-techniques-3ac0b6fe8a3](https://medium.freecodecamp.com/mastering-chrome-developer-tools-next-level-front-end-development-techniques-3ac0b6fe8a3)
 
 
 ![](http://p0.qhimg.com/t015e639b0bbff3a958.png)
