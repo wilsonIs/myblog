@@ -15,6 +15,14 @@
 {% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ style }}" />
 {% endfor %}
 <style>
+	.show-resources {
+	    width: 100%;
+	    visibility: visible;
+	    z-index: 10011;
+	    margin: auto;
+	    min-height: 1000px;
+	}
+
 	.particles-js-canvas-el {
 	    position: absolute;
 	    left: 0;
