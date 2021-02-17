@@ -52,7 +52,7 @@
 	{{ content }}
 	<div id="disqus_thread"></div>
 	<footer>
-		<p>&copy; Since 2016 <a href="http://wilsonis.github.io/myblog/">wilsonisonly.com</a></p>
+		<p>&copy; Since 2016 <a href="http://wilsonis.github.io/myblog/">wilson-zhang.com</a></p>
 	</footer>
 </div>
 
