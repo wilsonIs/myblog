@@ -10,5 +10,5 @@ comments: true
 ---
 
 <!-- more -->
-<iframe src='https://docs.qq.com/slide/DYXhQZXpjTm1BcVFW' width='960px' height='540px' frameborder='1'>
+<iframe src='https://docs.qq.com/slide/DYXhQZXpjTm1BcVFW' width='750px' height='540px' frameborder='1'>
 </iframe>
