@@ -1,0 +1,1 @@
+import{_ as o}from"./index.6afd7c72.js";import{d as s,o as t,E as a,L as _,M as c,B as d}from"./vendor.44cd46a8.js";const n=s({}),p=e=>(_("data-v-01857abf"),e=e(),c(),e),r={class:"page-not-found"},i=p(()=>d("p",null,"PAGE NOT FOUND 404",-1)),f=[i];function u(e,l,v,m,h,x){return t(),a("div",r,f)}var $=o(n,[["render",u],["__scopeId","data-v-01857abf"]]);export{$ as default};
